@@ -63,7 +63,7 @@ jobs:
           platforms: linux/amd64,linux/arm64
           builder: ${{ steps.buildx.outputs.name }}
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/ubuntu-openssl-old:latest
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/ubuntu-openssl-old:18.04
           labels: maintainer=Ruben Suarez <rubensa@gmail.com>
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache
